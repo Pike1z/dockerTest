@@ -1,4 +1,5 @@
 # This file automates building the Docker Image
+name: Docker Image Build
 
 # Trigger on new version release
 on:
