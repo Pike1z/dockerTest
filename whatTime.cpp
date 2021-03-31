@@ -16,6 +16,7 @@ int main() {
 
     // Print the time
     std::cout << "The current time is " << time << " (UTC)" << std::endl;
+    std::cout << "This is version 2.0 of the code" << std::endl;
 
     // Exit
     in_file.close();
