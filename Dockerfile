@@ -4,10 +4,14 @@ FROM ubuntu
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
     python3 \
+    make \
+    g++ \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-COPY timePrint.py /opt
+COPY timePrint.py whatTime.cpp timeFile Makefile /opt/
 ENV PATH="/opt:${PATH}"
 
-CMD ["python3", "timePrint.py"]
+RUN ["make"]
+
+CMD ["PrintTime"]

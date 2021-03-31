@@ -15,7 +15,7 @@ int main() {
     getline(in_file, time);
 
     // Print the time
-    std::cout << "The time is " << time << std::endl;
+    std::cout << "The current time is " << time << " (UTC)" << std::endl;
 
     // Exit
     in_file.close();
