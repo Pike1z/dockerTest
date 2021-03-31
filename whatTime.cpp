@@ -9,7 +9,7 @@ int main() {
     std::string time;
 
     // Update timeFile
-    system("./timePrint.py");
+    system("python3 timePrint.py");
 
     // Get the time
     getline(in_file, time);
