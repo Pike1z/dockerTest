@@ -12,9 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      tag: ${{ github.event.push }}
+      tag: ${{ github.event }}
     steps:
-      - run: echo ${{ github.event.push }}
+      - run: echo ${{ env.tag }}
   # docker:
   #   runs-on: ubuntu-latest
   #   steps:
