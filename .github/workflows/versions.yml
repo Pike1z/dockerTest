@@ -12,10 +12,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      tag: ${{ github.event }}
-      tagmap: toJSON(env.tag)
+      if: ${{ startsWith(github.ref, '/refs/tags')}}
+      tagname: ${{ github.ref##*/ }}
     steps:
-      - run: echo ${{ fromJSON(env.tagmap) }}
+      - run: echo ${{ env.tagname }}
   # docker:
   #   runs-on: ubuntu-latest
   #   steps:
