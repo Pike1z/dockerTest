@@ -9,10 +9,10 @@ on:
 
 # Build the Docker Image
 jobs:
-  # test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - run: echo "SUCCESS"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo $GITHUB_REF
   docker:
     runs-on: ubuntu-latest
     steps:
