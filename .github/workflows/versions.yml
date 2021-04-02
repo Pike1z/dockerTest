@@ -11,8 +11,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      tag: ${{  }}
     steps:
-      - run: echo ${{ github.event }}
+      - run: echo ${{ github.event.push }}
   # docker:
   #   runs-on: ubuntu-latest
   #   steps:
