@@ -38,4 +38,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: format('chargje/utc-time:latest, chargje/utc-time:{0}', steps.get_version.outputs.VERSION)
+          tags: ${{ format('chargje/utc-time:latest, chargje/utc-time:{0}', steps.get_version.outputs.VERSION) }}
