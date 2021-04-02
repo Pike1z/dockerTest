@@ -13,8 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       tag: ${{ github.event }}
+      tagmap: toJSON(env.tag)
     steps:
-      - run: echo ${{ env.tag }}
+      - run: echo ${{ fromJSON(env.tagmap) }}
   # docker:
   #   runs-on: ubuntu-latest
   #   steps:
