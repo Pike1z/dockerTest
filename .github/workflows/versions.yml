@@ -27,5 +27,6 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          tags_with_ref: true
+          repository: chargje/utc-time
+          tag_with_ref: true
           push: true
