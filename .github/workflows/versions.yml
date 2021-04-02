@@ -4,8 +4,8 @@ name: Docker Image Build
 # Trigger on new version release
 on:
   push:
-    # tags:
-    #   - v[0-9].[0-9].[0-9]
+    tags:
+      - v[0-9].[0-9].[0-9]
 
 # Build the Docker Image
 jobs:
